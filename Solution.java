@@ -49,14 +49,7 @@ class Solution {
 			l.add(0,'a');
 			count +=1;
 		}
-		if (l.get(l.size()-1)!='a') {
-			count +=2;
-		}
-		else {
-			if (l.get(l.size()-2)!= 'a'){
-					count +=1;
-			}
-		}
+		
 		for (int j =1; j<l.size()-1;j++) {
 			if (l.get(j) == 'a') {
 				if(l.get(j-1)!='a') {
@@ -75,6 +68,14 @@ class Solution {
 			else {
 				l.add(j+1,'a');
 				count +=1;
+			}
+		}
+		if (l.get(l.size()-1)!='a') {
+			count +=2;
+		}
+		else {
+			if (l.get(l.size()-2)!= 'a'){
+					count +=1;
 			}
 		}
 	return count;
