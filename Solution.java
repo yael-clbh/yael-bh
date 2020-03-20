@@ -60,7 +60,6 @@ class Solution {
 				}
 				else {
 					if (l.get(j+1) =='a') {
-						System.out.println(l);
 						return -1;
 						}
 					}
