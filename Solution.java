@@ -38,6 +38,17 @@ class Solution {
 		for (int i =0; i<chars.length;i++) {
 			l.add(chars[i]);
 		}
+		if(S.length() == 0) {
+			return 2;
+		}
+		if(S.length() == 1) {
+			if(S.charAt(0) == 'a') {
+				return 1;
+			}
+			else {
+				return 2;
+			}
+		}
 		if (l.get(0) == 'a') {
 			if (l.get(1)!='a') {
 				l.add(0,'a');
@@ -72,6 +83,7 @@ class Solution {
 			}
 		}
 		if (l.get(l.size()-1)!='a') {
+			System.out.println(l);
 			count +=2;
 		}
 		else {
