@@ -47,7 +47,7 @@ class Solution {
 		else {
 			l.add(0,'a');
 			l.add(0,'a');
-			count +=1;
+			count +=2;
 		}
 		
 		for (int j =1; j<l.size()-1;j++) {
@@ -65,8 +65,10 @@ class Solution {
 					}
 			}
 			else {
+				if(l.get(j+1)!= 'a' && (j+2) <= l.size()&& l.get(j+2)!='a') {
 				l.add(j+1,'a');
 				count +=1;
+				}
 			}
 		}
 		if (l.get(l.size()-1)!='a') {
