@@ -65,7 +65,7 @@ class Solution {
 					}
 			}
 			else {
-				if(l.get(j+1)!= 'a' && (j+2) < l.size()&& l.get(j+2)!='a') {
+				if(!(l.get(j+1)== 'a' && (j+2) < l.size()&& l.get(j+2)=='a')) {
 				l.add(j+1,'a');
 				count +=1;
 				}
