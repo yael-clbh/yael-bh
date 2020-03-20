@@ -12,11 +12,13 @@ class Solution {
 	int temp = N;
 	List<Integer> list = new ArrayList<>();
 	int i =0;
+	//splitting the number to list of ints 
 	while (i<str.length()) {
 		list.add(0,temp % 10);
 		temp /=10;
 		i+=1;
 	}
+	//checking for the right index to insert '5'
 	Object[] ints = list.toArray();
 	for (int j = 0; j<ints.length; j++) {
 		if ((int)ints[j] <5 ) {
@@ -25,6 +27,7 @@ class Solution {
 	}
 	int ans = 0;
 	Object[] ansArray = list.toArray();
+	//recalculating the new int
 	for(int k=0; k<ansArray.length; k++) {
 		ans += (int)ansArray[k]* Math.pow(10, ansArray.length-k-1);
 	}
@@ -38,6 +41,7 @@ class Solution {
 		for (int i =0; i<chars.length;i++) {
 			l.add(chars[i]);
 		}
+		//empty string/ 1 char string
 		if(S.length() == 0) {
 			return 2;
 		}
@@ -49,6 +53,7 @@ class Solution {
 				return 2;
 			}
 		}
+		// editing the String begining
 		if (l.get(0) == 'a') {
 			if (l.get(1)!='a') {
 				l.add(0,'a');
@@ -60,7 +65,7 @@ class Solution {
 			l.add(0,'a');
 			count +=2;
 		}
-		
+		//the rest of the string
 		for (int j =1; j<l.size()-1;j++) {
 			if (l.get(j) == 'a') {
 				if(l.get(j-1)!='a') {
@@ -82,6 +87,7 @@ class Solution {
 				}
 			}
 		}
+		//the end of the string
 		if (l.get(l.size()-1)!='a') {
 			count +=2;
 		}
