@@ -83,7 +83,6 @@ class Solution {
 			}
 		}
 		if (l.get(l.size()-1)!='a') {
-			System.out.println(l);
 			count +=2;
 		}
 		else {
